@@ -4,9 +4,11 @@ import pandas as pd
 import csv
 import time
 
+squig_count = 9305 # currently 9305 squigs minted, as of 2022-04-05
 columns = ['token_id', 'type', 'height', 'segments', 'spectrum', 'color_spread', 'steps_between', 'color_direction']
 values_list = []
-for squig in range(0, 9281): # current 9281 squigs minted
+
+for squig in range(0, squig_count):
 	url = "https://token.artblocks.io/" + str(squig)
 	r = requests.get(url) # returns a requests.Response object
 	squig_dict = r.json() # Returns a dictionary of the result
