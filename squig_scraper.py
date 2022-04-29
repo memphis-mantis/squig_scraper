@@ -1,3 +1,6 @@
+# include start_color and end_color -- grab fields from features (as opposed to traits)
+# scrape the animation_url and append to end of table
+
 import requests
 import json
 import pandas as pd
